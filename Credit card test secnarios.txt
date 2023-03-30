@@ -1,0 +1,27 @@
+Credit card test scenarios
+---------------------------------
+Credit Card Configuration: Includes configuration of card length, card range and card type (VISA, AMEX, MASTER etc)
+
+Merchant Configuration: A merchant needs to be configured who is authorized to accept card type payments
+
+Credit Card Processor Configuration: Credit card processor needs to be configured to process credit card payment (e.g. Mercury Payment System or Lynk, etc.)
+
+Capturing Card Details: Following areas should be tested while capturing card details.
+
+Credit card number : Test card numbers using the correct length and range and card numbers that are outside the correct length and range.
+Expiry date: Test valid expiry dates, invalid expiry dates and invalid date formats.
+CVV number: Test valid CVV numbers , mismatched CVV numbers and blank CVV numbers.
+AVS code: Entering AVS details for configured numeric or alphanumeric formats.
+Card reader to capture card details: Test swiping of cards from both sides and chips.
+Encryption: Verify that captured card numbers are properly encrypted and decrypted.
+Authorization: Once card details are captured, they are sent to processor to be authorized. Following areas need to be tested during authorization.
+
+Authorized amount: Test that the correct amount is being authorized.
+Receipt printing: Test that merchant and customer copies of the receipts and any vouchers print properly.
+Receipt details: Check that the receipts are printing the proper date, time, card details, authorized amount etc…
+Response code: Test that the correct response codes are being returned for approved, declined, on hold and all other transactions.
+Settlement: Once the payment is done following things should be tested:
+
+Reprinting receipt: Test that you can reprint the receipt for a closed transaction.
+Void credit card’s payment: Check that you can void a payment before posting it and that after posting a payment voiding is not allowed.
+Verifying report: All information regarding each credit card transaction should be reflected in reports. Any adjustments made in closed checks should be reflected in the report.
